@@ -13951,7 +13951,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 639A31A54E0F01C7ECD882B33D4541F6
+// __TYPE_DECL_START: 3B53D4594D91E1A9435BD8B77FBD1EAC
     namespace Game.Blueprint.Characters.BP_MasterZD {
         class BP_MasterZD_C extends UE.PaperZDCharacter {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -13964,6 +13964,7 @@ declare module "ue" {
              *Event when this actor takes ANY damage
              */
             ReceiveAnyDamage(Damage: number, DamageType: $Nullable<UE.DamageType>, InstigatedBy: $Nullable<UE.Controller>, DamageCauser: $Nullable<UE.Actor>) : void;
+            ResetColor() : void;
             static StaticClass(): Class;
             static Find(OrigInName: string, Outer?: Object): BP_MasterZD_C;
             static Load(InName: string): BP_MasterZD_C;
@@ -13974,7 +13975,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: F922CBE343F05D3D4D5FD89BE1E18E17
+// __TYPE_DECL_START: 6BF799E04BF8E4D4FF2CA1B8A88D07B1
     namespace Game.Blueprint.Characters.Hero.BPC_PlayerHero {
         class BPC_PlayerHero_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14065,7 +14066,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 0463DBBB4CF87DE37EE3ED84A5E7C986
+// __TYPE_DECL_START: 5FD7E3FB470B3F5DACED3FA8FD94207A
     namespace Game.Blueprint.Characters.BPC_MasterMonster {
         class BPC_MasterMonster_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14083,7 +14084,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 1B3BFB3E4A67995EB910E98423C81C2F
+// __TYPE_DECL_START: 4C6A7C674EA46DEE8764A2A954055782
     namespace Game.Blueprint.Characters.Skeleton.BPC_Skeleton {
         class BPC_Skeleton_C extends UE.Game.Blueprint.Characters.BPC_MasterMonster.BPC_MasterMonster_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
