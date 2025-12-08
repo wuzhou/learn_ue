@@ -18,7 +18,7 @@ class PlayerHeroMixin {
     {
         if (this.AC_Health && this.AC_Health.IsAlive)
         {
-            this.PlayAttackAnim();
+            this.ASC.TryActivateAbilitiesByTag(UE.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromTag(new UE.GameplayTag("Character.Ability.Attack")));
         }
     }
 
@@ -37,6 +37,12 @@ class PlayerHeroMixin {
                 UE.GameplayStatics.ApplyDamage(actor, 1.0, null, null, null);
             }
         }
+    }
+
+    ReceivePossessed(Controller: UE.Controller)
+    {
+        let ability = UE.Class.Load("/Game/Blueprint/GA/BPGA_Attack.BPGA_Attack_C");
+        this.ASC.K2_GiveAbility(ability, 0, 0);
     }
 }
 

@@ -13,7 +13,7 @@ class PlayerHeroMixin {
     }
     InpActEvt_IA_Attack_K2Node_EnhancedInputActionEvent_0(ActionValue, ElapsedTime, TriggeredTime, SourceAction) {
         if (this.AC_Health && this.AC_Health.IsAlive) {
-            this.PlayAttackAnim();
+            this.ASC.TryActivateAbilitiesByTag(UE.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromTag(new UE.GameplayTag("Character.Ability.Attack")));
         }
     }
     AttackHitbox() {
@@ -27,6 +27,10 @@ class PlayerHeroMixin {
                 UE.GameplayStatics.ApplyDamage(actor, 1.0, null, null, null);
             }
         }
+    }
+    ReceivePossessed(Controller) {
+        let ability = UE.Class.Load("/Game/Blueprint/GA/BPGA_Attack.BPGA_Attack_C");
+        this.ASC.K2_GiveAbility(ability, 0, 0);
     }
 }
 exports.default = PlayerHeroMixin;

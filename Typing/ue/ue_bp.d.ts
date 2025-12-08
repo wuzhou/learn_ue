@@ -13917,6 +13917,622 @@ declare module "ue" {
 
 // __TYPE_DECL_END
 // __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilityAsync_WaitAttributeChanged_AsyncWaitAttributeChangedDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilityAsync_WaitAttributeChanged_AsyncWaitAttributeChangedDelegate__PythonCallable;
+            static Load(InName: string): AbilityAsync_WaitAttributeChanged_AsyncWaitAttributeChangedDelegate__PythonCallable;
+        
+            __tid_AbilityAsync_WaitAttributeChanged_AsyncWaitAttributeChangedDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilityAsync_WaitGameplayEffectApplied_OnAppliedDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilityAsync_WaitGameplayEffectApplied_OnAppliedDelegate__PythonCallable;
+            static Load(InName: string): AbilityAsync_WaitGameplayEffectApplied_OnAppliedDelegate__PythonCallable;
+        
+            __tid_AbilityAsync_WaitGameplayEffectApplied_OnAppliedDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilityAsync_WaitGameplayEvent_EventReceivedDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilityAsync_WaitGameplayEvent_EventReceivedDelegate__PythonCallable;
+            static Load(InName: string): AbilityAsync_WaitGameplayEvent_EventReceivedDelegate__PythonCallable;
+        
+            __tid_AbilityAsync_WaitGameplayEvent_EventReceivedDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilityAsync_WaitGameplayTag_AsyncWaitGameplayTagDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilityAsync_WaitGameplayTag_AsyncWaitGameplayTagDelegate__PythonCallable;
+            static Load(InName: string): AbilityAsync_WaitGameplayTag_AsyncWaitGameplayTagDelegate__PythonCallable;
+        
+            __tid_AbilityAsync_WaitGameplayTag_AsyncWaitGameplayTagDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilityStateDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilityStateDelegate__PythonCallable;
+            static Load(InName: string): AbilityStateDelegate__PythonCallable;
+        
+            __tid_AbilityStateDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilitySystemComponent_AbilityAbilityKey__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilitySystemComponent_AbilityAbilityKey__PythonCallable;
+            static Load(InName: string): AbilitySystemComponent_AbilityAbilityKey__PythonCallable;
+        
+            __tid_AbilitySystemComponent_AbilityAbilityKey__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AbilitySystemComponent_AbilityConfirmOrCancel__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AbilitySystemComponent_AbilityConfirmOrCancel__PythonCallable;
+            static Load(InName: string): AbilitySystemComponent_AbilityConfirmOrCancel__PythonCallable;
+        
+            __tid_AbilitySystemComponent_AbilityConfirmOrCancel__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class ActiveGameplayEffectQueryCustomMatch_Dynamic__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): ActiveGameplayEffectQueryCustomMatch_Dynamic__PythonCallable;
+            static Load(InName: string): ActiveGameplayEffectQueryCustomMatch_Dynamic__PythonCallable;
+        
+            __tid_ActiveGameplayEffectQueryCustomMatch_Dynamic__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class ApplyRootMotionConstantForceDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): ApplyRootMotionConstantForceDelegate__PythonCallable;
+            static Load(InName: string): ApplyRootMotionConstantForceDelegate__PythonCallable;
+        
+            __tid_ApplyRootMotionConstantForceDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class ApplyRootMotionJumpForceDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): ApplyRootMotionJumpForceDelegate__PythonCallable;
+            static Load(InName: string): ApplyRootMotionJumpForceDelegate__PythonCallable;
+        
+            __tid_ApplyRootMotionJumpForceDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class ApplyRootMotionMoveToActorForceDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): ApplyRootMotionMoveToActorForceDelegate__PythonCallable;
+            static Load(InName: string): ApplyRootMotionMoveToActorForceDelegate__PythonCallable;
+        
+            __tid_ApplyRootMotionMoveToActorForceDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class ApplyRootMotionMoveToForceDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): ApplyRootMotionMoveToForceDelegate__PythonCallable;
+            static Load(InName: string): ApplyRootMotionMoveToForceDelegate__PythonCallable;
+        
+            __tid_ApplyRootMotionMoveToForceDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class ApplyRootMotionRadialForceDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): ApplyRootMotionRadialForceDelegate__PythonCallable;
+            static Load(InName: string): ApplyRootMotionRadialForceDelegate__PythonCallable;
+        
+            __tid_ApplyRootMotionRadialForceDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AsyncWaitGameplayTagQueryDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AsyncWaitGameplayTagQueryDelegate__PythonCallable;
+            static Load(InName: string): AsyncWaitGameplayTagQueryDelegate__PythonCallable;
+        
+            __tid_AsyncWaitGameplayTagQueryDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class DataRegistryItemAcquiredBPCallback__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): DataRegistryItemAcquiredBPCallback__PythonCallable;
+            static Load(InName: string): DataRegistryItemAcquiredBPCallback__PythonCallable;
+        
+            __tid_DataRegistryItemAcquiredBPCallback__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class GameplayEffectAppliedSelfDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): GameplayEffectAppliedSelfDelegate__PythonCallable;
+            static Load(InName: string): GameplayEffectAppliedSelfDelegate__PythonCallable;
+        
+            __tid_GameplayEffectAppliedSelfDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class GameplayEffectAppliedTargetDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): GameplayEffectAppliedTargetDelegate__PythonCallable;
+            static Load(InName: string): GameplayEffectAppliedTargetDelegate__PythonCallable;
+        
+            __tid_GameplayEffectAppliedTargetDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class GameplayEffectBlockedDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): GameplayEffectBlockedDelegate__PythonCallable;
+            static Load(InName: string): GameplayEffectBlockedDelegate__PythonCallable;
+        
+            __tid_GameplayEffectBlockedDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class InputPressDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): InputPressDelegate__PythonCallable;
+            static Load(InName: string): InputPressDelegate__PythonCallable;
+        
+            __tid_InputPressDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class InputReleaseDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): InputReleaseDelegate__PythonCallable;
+            static Load(InName: string): InputReleaseDelegate__PythonCallable;
+        
+            __tid_InputReleaseDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class MontageWaitSimpleDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): MontageWaitSimpleDelegate__PythonCallable;
+            static Load(InName: string): MontageWaitSimpleDelegate__PythonCallable;
+        
+            __tid_MontageWaitSimpleDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class MovementModeChangedDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): MovementModeChangedDelegate__PythonCallable;
+            static Load(InName: string): MovementModeChangedDelegate__PythonCallable;
+        
+            __tid_MovementModeChangedDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class MoveToLocationDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): MoveToLocationDelegate__PythonCallable;
+            static Load(InName: string): MoveToLocationDelegate__PythonCallable;
+        
+            __tid_MoveToLocationDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class MovieSceneGameplayCueEvent__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): MovieSceneGameplayCueEvent__PythonCallable;
+            static Load(InName: string): MovieSceneGameplayCueEvent__PythonCallable;
+        
+            __tid_MovieSceneGameplayCueEvent__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class NetworkSyncDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): NetworkSyncDelegate__PythonCallable;
+            static Load(InName: string): NetworkSyncDelegate__PythonCallable;
+        
+            __tid_NetworkSyncDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class RepeatedActionDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): RepeatedActionDelegate__PythonCallable;
+            static Load(InName: string): RepeatedActionDelegate__PythonCallable;
+        
+            __tid_RepeatedActionDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class SpawnActorDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): SpawnActorDelegate__PythonCallable;
+            static Load(InName: string): SpawnActorDelegate__PythonCallable;
+        
+            __tid_SpawnActorDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class VisualizeTargetingDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): VisualizeTargetingDelegate__PythonCallable;
+            static Load(InName: string): VisualizeTargetingDelegate__PythonCallable;
+        
+            __tid_VisualizeTargetingDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitAbilityActivateDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitAbilityActivateDelegate__PythonCallable;
+            static Load(InName: string): WaitAbilityActivateDelegate__PythonCallable;
+        
+            __tid_WaitAbilityActivateDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitAbilityCommitDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitAbilityCommitDelegate__PythonCallable;
+            static Load(InName: string): WaitAbilityCommitDelegate__PythonCallable;
+        
+            __tid_WaitAbilityCommitDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitAttributeChangeDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitAttributeChangeDelegate__PythonCallable;
+            static Load(InName: string): WaitAttributeChangeDelegate__PythonCallable;
+        
+            __tid_WaitAttributeChangeDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitAttributeChangeRatioThresholdDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitAttributeChangeRatioThresholdDelegate__PythonCallable;
+            static Load(InName: string): WaitAttributeChangeRatioThresholdDelegate__PythonCallable;
+        
+            __tid_WaitAttributeChangeRatioThresholdDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitAttributeChangeThresholdDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitAttributeChangeThresholdDelegate__PythonCallable;
+            static Load(InName: string): WaitAttributeChangeThresholdDelegate__PythonCallable;
+        
+            __tid_WaitAttributeChangeThresholdDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitCancelDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitCancelDelegate__PythonCallable;
+            static Load(InName: string): WaitCancelDelegate__PythonCallable;
+        
+            __tid_WaitCancelDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitConfirmCancelDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitConfirmCancelDelegate__PythonCallable;
+            static Load(InName: string): WaitConfirmCancelDelegate__PythonCallable;
+        
+            __tid_WaitConfirmCancelDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitDelayDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitDelayDelegate__PythonCallable;
+            static Load(InName: string): WaitDelayDelegate__PythonCallable;
+        
+            __tid_WaitDelayDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitGameplayEffectRemovedDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitGameplayEffectRemovedDelegate__PythonCallable;
+            static Load(InName: string): WaitGameplayEffectRemovedDelegate__PythonCallable;
+        
+            __tid_WaitGameplayEffectRemovedDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitGameplayEffectStackChangeDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitGameplayEffectStackChangeDelegate__PythonCallable;
+            static Load(InName: string): WaitGameplayEffectStackChangeDelegate__PythonCallable;
+        
+            __tid_WaitGameplayEffectStackChangeDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitGameplayEventDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitGameplayEventDelegate__PythonCallable;
+            static Load(InName: string): WaitGameplayEventDelegate__PythonCallable;
+        
+            __tid_WaitGameplayEventDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitGameplayTagDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitGameplayTagDelegate__PythonCallable;
+            static Load(InName: string): WaitGameplayTagDelegate__PythonCallable;
+        
+            __tid_WaitGameplayTagDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitGameplayTagQueryDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitGameplayTagQueryDelegate__PythonCallable;
+            static Load(InName: string): WaitGameplayTagQueryDelegate__PythonCallable;
+        
+            __tid_WaitGameplayTagQueryDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitOverlapDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitOverlapDelegate__PythonCallable;
+            static Load(InName: string): WaitOverlapDelegate__PythonCallable;
+        
+            __tid_WaitOverlapDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitTargetDataDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitTargetDataDelegate__PythonCallable;
+            static Load(InName: string): WaitTargetDataDelegate__PythonCallable;
+        
+            __tid_WaitTargetDataDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class WaitVelocityChangeDelegate__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WaitVelocityChangeDelegate__PythonCallable;
+            static Load(InName: string): WaitVelocityChangeDelegate__PythonCallable;
+        
+            __tid_WaitVelocityChangeDelegate__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
     namespace Game.ThirdPerson.Maps.ThirdPersonMap {
         class ThirdPersonMap_C extends UE.LevelScriptActor {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -13951,11 +14567,12 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 3B53D4594D91E1A9435BD8B77FBD1EAC
+// __TYPE_DECL_START: F402F0B3478E745C67D6989E44816260
     namespace Game.Blueprint.Characters.BP_MasterZD {
         class BP_MasterZD_C extends UE.PaperZDCharacter {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
             UberGraphFrame: UE.PointerToUberGraphFrame;
+            ASC: UE.AbilitySystemComponent;
             AC_Health: UE.Game.Blueprint.Components.AC_Health.AC_Health_C;
             DemageBox: UE.BoxComponent;
             HitBox: UE.BoxComponent;
@@ -13975,7 +14592,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 6BF799E04BF8E4D4FF2CA1B8A88D07B1
+// __TYPE_DECL_START: 7EE5450C4435F74DE8D291B4166C6CB4
     namespace Game.Blueprint.Characters.Hero.BPC_PlayerHero {
         class BPC_PlayerHero_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -13991,6 +14608,10 @@ declare module "ue" {
              *Event when play begins for this actor.
              */
             ReceiveBeginPlay() : void;
+            /*
+             *Event called when the Pawn is possessed by a Controller. Only called on the server (or in standalone)
+             */
+            ReceivePossessed(NewController: $Nullable<UE.Controller>) : void;
             static StaticClass(): Class;
             static Find(OrigInName: string, Outer?: Object): BPC_PlayerHero_C;
             static Load(InName: string): BPC_PlayerHero_C;
@@ -14084,7 +14705,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 4C6A7C674EA46DEE8764A2A954055782
+// __TYPE_DECL_START: E48883BF464E6EF6F96580A17B655DA6
     namespace Game.Blueprint.Characters.Skeleton.BPC_Skeleton {
         class BPC_Skeleton_C extends UE.Game.Blueprint.Characters.BPC_MasterMonster.BPC_MasterMonster_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14159,6 +14780,35 @@ declare module "ue" {
             static Load(InName: string): BP_MainWidget_C;
         
             __tid_BP_MainWidget_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 1974BD3841E4373130F9DA991C3B3305
+    namespace Game.Blueprint.GA.BPGA_Attack {
+        class BPGA_Attack_C extends UE.GameplayAbility {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            UberGraphFrame: UE.PointerToUberGraphFrame;
+            ExecuteUbergraph_BPGA_Attack(EntryPoint: number) : void;
+            /*
+             *The main function that defines what an ability does.
+             * -Child classes will want to override this
+             * -This function graph should call CommitAbility
+             * -This function graph should call EndAbility
+             *
+             * Latent_async actions are ok in this graph. Note that Commit and EndAbility calling requirements speak to the K2_ActivateAbility graph.
+             * In C++, the call to K2_ActivateAbility() may return without CommitAbility or EndAbility having been called. But it is expected that this
+             * will only occur when latent_async actions are pending. When K2_ActivateAbility logically finishes, then we will expect Commit_End to have been called.
+             */
+            K2_ActivateAbility() : void;
+            OnCancelled_326116DD4207FC5A8DE24DA9EC7EDF72() : void;
+            OnCompleted_326116DD4207FC5A8DE24DA9EC7EDF72() : void;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): BPGA_Attack_C;
+            static Load(InName: string): BPGA_Attack_C;
+        
+            __tid_BPGA_Attack_C_0__: boolean;
         }
         
     }
