@@ -14567,15 +14567,15 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: F402F0B3478E745C67D6989E44816260
+// __TYPE_DECL_START: 3C5C7FE34683DB00626BFB9AC57A8BDB
     namespace Game.Blueprint.Characters.BP_MasterZD {
-        class BP_MasterZD_C extends UE.PaperZDCharacter {
+        class BP_MasterZD_C extends UE.ABBasePaperZDCharacter {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
             UberGraphFrame: UE.PointerToUberGraphFrame;
-            ASC: UE.AbilitySystemComponent;
             AC_Health: UE.Game.Blueprint.Components.AC_Health.AC_Health_C;
             DemageBox: UE.BoxComponent;
             HitBox: UE.BoxComponent;
+            ABPostInitializeComponents() : void;
             ExecuteUbergraph_BP_MasterZD(EntryPoint: number) : void;
             /*
              *Event when this actor takes ANY damage
@@ -14592,7 +14592,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 7EE5450C4435F74DE8D291B4166C6CB4
+// __TYPE_DECL_START: AAC747A247549AB6E11736A3DAAA1058
     namespace Game.Blueprint.Characters.Hero.BPC_PlayerHero {
         class BPC_PlayerHero_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14622,7 +14622,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: E0EE27F544D27616179015897089D2E6
+// __TYPE_DECL_START: 829E79594DE4C495549150B2090729C9
     namespace Game.Blueprint.Characters.Hero.ABP_PlayerHero {
         class ABP_PlayerHero_C extends UE.PaperZDAnimInstance {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14785,7 +14785,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 1974BD3841E4373130F9DA991C3B3305
+// __TYPE_DECL_START: 1AF8287740A416DF05F311BB67C2619C
     namespace Game.Blueprint.GA.BPGA_Attack {
         class BPGA_Attack_C extends UE.GameplayAbility {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);

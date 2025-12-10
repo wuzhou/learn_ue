@@ -33,6 +33,12 @@ class MasterZDMixin {
         console.log("Mixin MasterZD ResetColor");
         this.Sprite.SetSpriteColor(new UE.LinearColor(1, 1, 1, 1));
     }
+
+    ABPostInitializeComponents()
+    {
+        let abSet = this.ASC.GetAttributeSet(UE.ABCharacterAttributeSet.StaticClass()) as UE.ABCharacterAttributeSet;
+        console.log("Mixin MasterZD ABPostInitializeComponents", abSet.MaxHealth.CurrentValue);
+    }
 }
 
 export default MasterZDMixin;
