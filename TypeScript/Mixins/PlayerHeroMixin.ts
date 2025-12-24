@@ -41,8 +41,11 @@ class PlayerHeroMixin {
 
     ReceivePossessed(Controller: UE.Controller)
     {
-        let ability = UE.Class.Load("/Game/Blueprint/GA/BPGA_Attack.BPGA_Attack_C");
-        this.ASC.K2_GiveAbility(ability, 0, 0);
+        let attackAbility = UE.Class.Load("/Game/Blueprint/GA/BPGA_Attack.BPGA_Attack_C");
+        this.ASC.K2_GiveAbility(attackAbility);
+
+        let hitCheckAbility = UE.Class.Load("/Game/Blueprint/GA/BPGA_HitCheck.BPGA_HitCheck_C");
+        this.ASC.K2_GiveAbility(hitCheckAbility);
     }
 }
 

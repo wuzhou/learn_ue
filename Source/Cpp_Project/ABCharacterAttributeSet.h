@@ -7,6 +7,8 @@
 #include "AbilitySystemComponent.h"
 #include "ABCharacterAttributeSet.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FAttributeDataChanged, float, oldValue, float, newValue);
+
 /**
  * 
  */
@@ -28,13 +30,28 @@ public:
 	GAMEPLAYATTRIBUTE_VALUE_SETTER(Health);
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(Health);
 
+	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ThisClass, Damage);
+	GAMEPLAYATTRIBUTE_VALUE_GETTER(Damage);
+	GAMEPLAYATTRIBUTE_VALUE_SETTER(Damage);
+	GAMEPLAYATTRIBUTE_VALUE_INITTER(Damage);
+
 
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+	virtual void PostAttributeChange(const FGameplayAttribute& Attribute, float OldValue, float NewValue) override;
+
+	UPROPERTY(BlueprintAssignable, Category = "Attribute")
+	mutable FAttributeDataChanged OnMaxHealthChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Attribute")
+	mutable FAttributeDataChanged OnHealthChanged;
 
 protected:
-	UPROPERTY(BlueprintReadOnly, Category="Attribute")
+	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
 	FGameplayAttributeData MaxHealth;
 
-	UPROPERTY(BlueprintReadOnly, Category="Attribute")
+	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
 	FGameplayAttributeData Health;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
+	FGameplayAttributeData Damage;
 };

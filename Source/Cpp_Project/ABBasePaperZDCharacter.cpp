@@ -20,4 +20,7 @@ void AABBasePaperZDCharacter::PostInitializeComponents()
 	Super::PostInitializeComponents();
 
 	ABPostInitializeComponents();
+
+	ASC->SetNumericAttributeBase(CharacterAttributeSet->GetMaxHealthAttribute(), 10.0f);
+	ASC->SetNumericAttributeBase(CharacterAttributeSet->GetHealthAttribute(), 10.0f);
 }

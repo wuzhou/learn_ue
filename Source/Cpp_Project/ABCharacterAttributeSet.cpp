@@ -20,3 +20,15 @@ void UABCharacterAttributeSet::PreAttributeChange(const FGameplayAttribute& Attr
 		NewValue = FMath::Clamp(NewValue, 0.0f, GetMaxHealth());
 	}
 }
+
+void UABCharacterAttributeSet::PostAttributeChange(const FGameplayAttribute& Attribute, float OldValue, float NewValue)
+{
+	if (Attribute == GetMaxHealthAttribute())
+	{
+		OnMaxHealthChanged.Broadcast(OldValue, NewValue);
+	}
+	else if (Attribute == GetHealthAttribute())
+	{
+		OnHealthChanged.Broadcast(OldValue, NewValue);
+	}
+}

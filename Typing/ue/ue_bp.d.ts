@@ -14533,6 +14533,20 @@ declare module "ue" {
 
 // __TYPE_DECL_END
 // __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class AttributeDataChanged__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): AttributeDataChanged__PythonCallable;
+            static Load(InName: string): AttributeDataChanged__PythonCallable;
+        
+            __tid_AttributeDataChanged__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
     namespace Game.ThirdPerson.Maps.ThirdPersonMap {
         class ThirdPersonMap_C extends UE.LevelScriptActor {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14622,7 +14636,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 829E79594DE4C495549150B2090729C9
+// __TYPE_DECL_START: 76015BDF49BB0D73C60147A1A9136D8E
     namespace Game.Blueprint.Characters.Hero.ABP_PlayerHero {
         class ABP_PlayerHero_C extends UE.PaperZDAnimInstance {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14809,6 +14823,63 @@ declare module "ue" {
             static Load(InName: string): BPGA_Attack_C;
         
             __tid_BPGA_Attack_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 1318C93746581FF0CB118DB454C28A20
+    namespace Game.Blueprint.GA.BPGA_HitCheck {
+        class BPGA_HitCheck_C extends UE.GameplayAbility {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            UberGraphFrame: UE.PointerToUberGraphFrame;
+            ExecuteUbergraph_BPGA_HitCheck(EntryPoint: number) : void;
+            /*
+             *The main function that defines what an ability does.
+             * -Child classes will want to override this
+             * -This function graph should call CommitAbility
+             * -This function graph should call EndAbility
+             *
+             * Latent_async actions are ok in this graph. Note that Commit and EndAbility calling requirements speak to the K2_ActivateAbility graph.
+             * In C++, the call to K2_ActivateAbility() may return without CommitAbility or EndAbility having been called. But it is expected that this
+             * will only occur when latent_async actions are pending. When K2_ActivateAbility logically finishes, then we will expect Commit_End to have been called.
+             */
+            K2_ActivateAbility() : void;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): BPGA_HitCheck_C;
+            static Load(InName: string): BPGA_HitCheck_C;
+        
+            __tid_BPGA_HitCheck_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: B51885B24C31E4B03E9CE0A279FE0BBB
+    namespace Game.Blueprint.GE.BPGE_AttackHit {
+        class BPGE_AttackHit_C extends UE.GameplayEffect {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): BPGE_AttackHit_C;
+            static Load(InName: string): BPGE_AttackHit_C;
+        
+            __tid_BPGE_AttackHit_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 71F09D494694FDC98D81BF8DA66840C6
+    namespace Game.Blueprint.GA.TA_Hitbox {
+        class TA_Hitbox_C extends UE.ABAbilityTargetActorHitbox {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            DefaultSceneRoot: UE.SceneComponent;
+            GetHitboxOverlapActors(InSourceActor: $Nullable<UE.Actor>) : TArray<UE.Actor>;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): TA_Hitbox_C;
+            static Load(InName: string): TA_Hitbox_C;
+        
+            __tid_TA_Hitbox_C_0__: boolean;
         }
         
     }

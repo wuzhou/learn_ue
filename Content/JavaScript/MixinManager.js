@@ -9,6 +9,7 @@ const GameModeMixin_1 = require("./Mixins/GameModeMixin");
 const AIMonsterMixin_1 = require("./Mixins/AIMonsterMixin");
 const MasterMonsterMixin_1 = require("./Mixins/MasterMonsterMixin");
 const PlayerHeroMixin_1 = require("./Mixins/PlayerHeroMixin");
+const TAHitboxMixin_1 = require("./Mixins/TAHitboxMixin");
 class MixinManager {
     baseClassArray = UE.NewArray(UE.Class);
     constructor() {
@@ -44,6 +45,10 @@ class MixinManager {
         this.baseClassArray.Add(playerHeroClass);
         const playerHeroBPJs = puerts_1.blueprint.tojs(playerHeroClass);
         puerts_1.blueprint.mixin(playerHeroBPJs, PlayerHeroMixin_1.default);
+        let taHitboxClass = UE.Class.Load("/Game/Blueprint/GA/TA_Hitbox.TA_Hitbox_C");
+        this.baseClassArray.Add(taHitboxClass);
+        const taHitboxBPJs = puerts_1.blueprint.tojs(taHitboxClass);
+        puerts_1.blueprint.mixin(taHitboxBPJs, TAHitboxMixin_1.default);
     }
 }
 exports.MixinManager = MixinManager;
