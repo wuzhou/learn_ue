@@ -9,8 +9,8 @@ class TAHitboxMixin {
         let player = InSourceActor;
         if (player && player.HitBox) {
             let actorsRef = (0, puerts_1.$ref)(UE.NewArray(UE.Actor));
-            let masterMonsterClass = UE.Class.Load("/Game/Blueprint/Characters/Monster/BPC_MasterMonster.BPC_MasterMonster_C");
-            player.HitBox.GetOverlappingActors(actorsRef, masterMonsterClass);
+            //let masterMonsterClass = UE.Class.Load("/Game/Blueprint/Characters/Monster/BPC_MasterMonster.BPC_MasterMonster_C");
+            player.HitBox.GetOverlappingActors(actorsRef);
             let actors = (0, puerts_1.$unref)(actorsRef);
             console.log("actors.length", actors.Num());
             return actors;

@@ -8,6 +8,7 @@ import AIMonsterMixin from './Mixins/AIMonsterMixin';
 import MasterMonsterMixin from './Mixins/MasterMonsterMixin';
 import PlayerHeroMixin from './Mixins/PlayerHeroMixin';
 import TAHitboxMixin from './Mixins/TAHitboxMixin';
+import GameWidgetMixin from './Mixins/GameWidgetMixin';
 
 class MixinManager {
 
@@ -59,6 +60,11 @@ class MixinManager {
         this.baseClassArray.Add(taHitboxClass);
         const taHitboxBPJs = blueprint.tojs<typeof UE.Game.Blueprint.GA.TA_Hitbox.TA_Hitbox_C>(taHitboxClass);
         blueprint.mixin(taHitboxBPJs, TAHitboxMixin);
+
+        let gameWidgetClass = UE.Class.Load("/Game/Blueprint/UI/BP_GameWidget.BP_GameWidget_C");
+        this.baseClassArray.Add(gameWidgetClass);
+        const gameWidgetBPJs = blueprint.tojs<typeof UE.Game.Blueprint.UI.BP_GameWidget.BP_GameWidget_C>(gameWidgetClass);
+        blueprint.mixin(gameWidgetBPJs, GameWidgetMixin);
     }
 }
 

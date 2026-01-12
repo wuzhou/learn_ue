@@ -2,9 +2,10 @@
 
 
 #include "ABCharacterAttributeSet.h"
+#include "GameplayEffectExtension.h"
 
 UABCharacterAttributeSet::UABCharacterAttributeSet() :
-	MaxHealth(100.0f)
+	MaxHealth(50.0f)
 {
 	InitHealth(GetMaxHealth());
 }
@@ -30,5 +31,13 @@ void UABCharacterAttributeSet::PostAttributeChange(const FGameplayAttribute& Att
 	else if (Attribute == GetHealthAttribute())
 	{
 		OnHealthChanged.Broadcast(OldValue, NewValue);
+	}
+}
+
+void UABCharacterAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data)
+{
+	if (GetHealth() <= 0.0f)
+	{
+		OnOutOfHealth.Broadcast(Data.EffectSpec.GetEffectContext().GetInstigator());
 	}
 }

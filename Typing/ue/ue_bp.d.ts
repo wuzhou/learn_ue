@@ -14547,6 +14547,20 @@ declare module "ue" {
 
 // __TYPE_DECL_END
 // __TYPE_DECL_START: ASSOCIATION
+    namespace Engine.PythonTypes {
+        class OutOfHealth__PythonCallable extends UE.PythonCallableForDelegate {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): OutOfHealth__PythonCallable;
+            static Load(InName: string): OutOfHealth__PythonCallable;
+        
+            __tid_OutOfHealth__PythonCallable_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: ASSOCIATION
     namespace Game.ThirdPerson.Maps.ThirdPersonMap {
         class ThirdPersonMap_C extends UE.LevelScriptActor {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14606,13 +14620,15 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: AAC747A247549AB6E11736A3DAAA1058
+// __TYPE_DECL_START: E50FBE414F7B3E667C85248F366BE573
     namespace Game.Blueprint.Characters.Hero.BPC_PlayerHero {
         class BPC_PlayerHero_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
             UberGraphFrame: UE.PointerToUberGraphFrame;
             Camera: UE.CameraComponent;
             SpringArm: UE.SpringArmComponent;
+            Hud: UE.Game.Blueprint.UI.BP_GameWidget.BP_GameWidget_C;
+            ABPostInitializeComponents() : void;
             AttackHitbox() : void;
             ExecuteUbergraph_BPC_PlayerHero(EntryPoint: number) : void;
             InpActEvt_IA_Attack_K2Node_EnhancedInputActionEvent_0(ActionValue: UE.InputActionValue, ElapsedTime: number, TriggeredTime: number, SourceAction: $Nullable<UE.InputAction>) : void;
@@ -14784,7 +14800,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 9844585F48B8A42704FC15A4118710A6
+// __TYPE_DECL_START: DBD8FD1942D6BD610EE3CC8113D1FE60
     namespace Game.Blueprint.UI.BP_MainWidget {
         class BP_MainWidget_C extends UE.UserWidget {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14799,7 +14815,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 1AF8287740A416DF05F311BB67C2619C
+// __TYPE_DECL_START: 1D6E2C2945D9C478463F9CB42CDD75F3
     namespace Game.Blueprint.GA.BPGA_Attack {
         class BPGA_Attack_C extends UE.GameplayAbility {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14828,11 +14844,13 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 1318C93746581FF0CB118DB454C28A20
+// __TYPE_DECL_START: 0101D1CF48E15D5F5512CCAE8BCD0A30
     namespace Game.Blueprint.GA.BPGA_HitCheck {
         class BPGA_HitCheck_C extends UE.GameplayAbility {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
             UberGraphFrame: UE.PointerToUberGraphFrame;
+            TargetClass: UE.Class;
+            Cancelled_86D747884346E778617462923C3BD46E(Data: UE.GameplayAbilityTargetDataHandle) : void;
             ExecuteUbergraph_BPGA_HitCheck(EntryPoint: number) : void;
             /*
              *The main function that defines what an ability does.
@@ -14845,6 +14863,7 @@ declare module "ue" {
              * will only occur when latent_async actions are pending. When K2_ActivateAbility logically finishes, then we will expect Commit_End to have been called.
              */
             K2_ActivateAbility() : void;
+            ValidData_86D747884346E778617462923C3BD46E(Data: UE.GameplayAbilityTargetDataHandle) : void;
             static StaticClass(): Class;
             static Find(OrigInName: string, Outer?: Object): BPGA_HitCheck_C;
             static Load(InName: string): BPGA_HitCheck_C;
@@ -14869,7 +14888,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 71F09D494694FDC98D81BF8DA66840C6
+// __TYPE_DECL_START: DBDD5200468C846085F60ABFAD9DAB4E
     namespace Game.Blueprint.GA.TA_Hitbox {
         class TA_Hitbox_C extends UE.ABAbilityTargetActorHitbox {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14880,6 +14899,43 @@ declare module "ue" {
             static Load(InName: string): TA_Hitbox_C;
         
             __tid_TA_Hitbox_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 1DEE7D0A4630FB312475178062BEA964
+    namespace Game.Blueprint.UI.BP_GameWidget {
+        class BP_GameWidget_C extends UE.UserWidget {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            UberGraphFrame: UE.PointerToUberGraphFrame;
+            HealthText: UE.TextBlock;
+            CurrentHealth: number;
+            MaxHealth: number;
+            BindCharacterAttributes(CharacterAttributeSet: $Nullable<UE.ABCharacterAttributeSet>) : void;
+            ExecuteUbergraph_BP_GameWidget(EntryPoint: number) : void;
+            OnHealthChanged(oldValue: number, newValue: number) : void;
+            OnMaxHeathChanged(oldValue: number, newValue: number) : void;
+            Refresh() : void;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): BP_GameWidget_C;
+            static Load(InName: string): BP_GameWidget_C;
+        
+            __tid_BP_GameWidget_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 95B49F1D450002143199B99A3A60EF33
+    namespace Game.Blueprint.GA.BPGA_Death {
+        class BPGA_Death_C extends UE.GameplayAbility {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): BPGA_Death_C;
+            static Load(InName: string): BPGA_Death_C;
+        
+            __tid_BPGA_Death_C_0__: boolean;
         }
         
     }

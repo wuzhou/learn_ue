@@ -23,13 +23,17 @@ void AABAbilityTargetActorHitbox::ConfirmTargetingAndContinue()
 	check(ShouldProduceTargetData());
 	if (IsConfirmTargetingAllowed())
 	{
+		
 		TArray<AActor*> actors = GetHitboxOverlapActors(SourceActor);
 		TArray<TWeakObjectPtr<AActor>> weakActors;
 		weakActors.Reserve(actors.Num());
 		for (AActor* actor : actors)
 		{
-			TWeakObjectPtr<AActor> weakActor(actor);
-			weakActors.Add(weakActor);
+			if (Filter.FilterPassesForActor(actor))
+			{
+				TWeakObjectPtr<AActor> weakActor(actor);
+				weakActors.Add(weakActor);
+			}
 		}
 
 		FGameplayAbilityTargetData_ActorArray* targetDataPtr = new FGameplayAbilityTargetData_ActorArray();

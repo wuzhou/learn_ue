@@ -8,6 +8,7 @@
 #include "ABCharacterAttributeSet.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FAttributeDataChanged, float, oldValue, float, newValue);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOutOfHealth, AActor*, InInsigator);
 
 /**
  * 
@@ -38,12 +39,16 @@ public:
 
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 	virtual void PostAttributeChange(const FGameplayAttribute& Attribute, float OldValue, float NewValue) override;
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 
 	UPROPERTY(BlueprintAssignable, Category = "Attribute")
 	mutable FAttributeDataChanged OnMaxHealthChanged;
 
 	UPROPERTY(BlueprintAssignable, Category = "Attribute")
 	mutable FAttributeDataChanged OnHealthChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Attribute")
+	mutable FOutOfHealth OnOutOfHealth;
 
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute")

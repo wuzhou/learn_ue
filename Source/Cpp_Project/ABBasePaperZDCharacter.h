@@ -20,6 +20,9 @@ public:
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void ABPostInitializeComponents();
+
+	UFUNCTION()
+	void OnOutOfHealthCpp(AActor* InInstigator);
 	
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "GAS")

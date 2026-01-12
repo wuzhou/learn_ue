@@ -21,6 +21,13 @@ void AABBasePaperZDCharacter::PostInitializeComponents()
 
 	ABPostInitializeComponents();
 
+	ASC->GetSet<UABCharacterAttributeSet>()->OnOutOfHealth.AddDynamic(this, &ThisClass::OnOutOfHealthCpp);
+
 	ASC->SetNumericAttributeBase(CharacterAttributeSet->GetMaxHealthAttribute(), 10.0f);
 	ASC->SetNumericAttributeBase(CharacterAttributeSet->GetHealthAttribute(), 10.0f);
+}
+
+void AABBasePaperZDCharacter::OnOutOfHealthCpp(AActor* InInstigator)
+{
+
 }
