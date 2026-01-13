@@ -26,6 +26,11 @@ class MasterZDMixin {
         let abSet = this.ASC.GetAttributeSet(UE.ABCharacterAttributeSet.StaticClass());
         console.log("Mixin MasterZD ABPostInitializeComponents", abSet.MaxHealth.CurrentValue);
     }
+    ShowDamageEffect() {
+        this.Sprite.SetSpriteColor(new UE.LinearColor(1, 0, 0, 1));
+        UE.KismetSystemLibrary.K2_ClearTimer(this, "ResetColor");
+        this.timerHandle = UE.KismetSystemLibrary.K2_SetTimer(this, "ResetColor", 0.2, false);
+    }
 }
 exports.default = MasterZDMixin;
 //# sourceMappingURL=MasterZDMixin.js.map

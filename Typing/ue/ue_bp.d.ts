@@ -14595,7 +14595,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 3C5C7FE34683DB00626BFB9AC57A8BDB
+// __TYPE_DECL_START: 064BA27B4D5D802ECAD3A6B3CF592A7C
     namespace Game.Blueprint.Characters.BP_MasterZD {
         class BP_MasterZD_C extends UE.ABBasePaperZDCharacter {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14610,6 +14610,7 @@ declare module "ue" {
              */
             ReceiveAnyDamage(Damage: number, DamageType: $Nullable<UE.DamageType>, InstigatedBy: $Nullable<UE.Controller>, DamageCauser: $Nullable<UE.Actor>) : void;
             ResetColor() : void;
+            ShowDamageEffect() : void;
             static StaticClass(): Class;
             static Find(OrigInName: string, Outer?: Object): BP_MasterZD_C;
             static Load(InName: string): BP_MasterZD_C;
@@ -14620,7 +14621,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: E50FBE414F7B3E667C85248F366BE573
+// __TYPE_DECL_START: 392DD4D94C2070DBA1CE119244CAAF0D
     namespace Game.Blueprint.Characters.Hero.BPC_PlayerHero {
         class BPC_PlayerHero_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14717,7 +14718,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 5FD7E3FB470B3F5DACED3FA8FD94207A
+// __TYPE_DECL_START: E3A39FE0432C8F0EF401208A9777B06B
     namespace Game.Blueprint.Characters.BPC_MasterMonster {
         class BPC_MasterMonster_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14725,6 +14726,10 @@ declare module "ue" {
             BndEvt__BPC_MasterMonster_HitBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent: $Nullable<UE.PrimitiveComponent>, OtherActor: $Nullable<UE.Actor>, OtherComp: $Nullable<UE.PrimitiveComponent>, OtherBodyIndex: number, bFromSweep: boolean, SweepResult: UE.HitResult) : void;
             ExecuteUbergraph_BPC_MasterMonster(EntryPoint: number) : void;
             FollowPlayer(WorldDirection: UE.Vector) : void;
+            /*
+             *Event called when the Pawn is possessed by a Controller. Only called on the server (or in standalone)
+             */
+            ReceivePossessed(NewController: $Nullable<UE.Controller>) : void;
             static StaticClass(): Class;
             static Find(OrigInName: string, Outer?: Object): BPC_MasterMonster_C;
             static Load(InName: string): BPC_MasterMonster_C;
@@ -14735,7 +14740,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: E48883BF464E6EF6F96580A17B655DA6
+// __TYPE_DECL_START: 97157D2F4D116824A3E693BFA708BD25
     namespace Game.Blueprint.Characters.Skeleton.BPC_Skeleton {
         class BPC_Skeleton_C extends UE.Game.Blueprint.Characters.BPC_MasterMonster.BPC_MasterMonster_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14844,12 +14849,11 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 0101D1CF48E15D5F5512CCAE8BCD0A30
+// __TYPE_DECL_START: 12FEC84C4AA115E74C0BB5900543B7F7
     namespace Game.Blueprint.GA.BPGA_HitCheck {
         class BPGA_HitCheck_C extends UE.GameplayAbility {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
             UberGraphFrame: UE.PointerToUberGraphFrame;
-            TargetClass: UE.Class;
             Cancelled_86D747884346E778617462923C3BD46E(Data: UE.GameplayAbilityTargetDataHandle) : void;
             ExecuteUbergraph_BPGA_HitCheck(EntryPoint: number) : void;
             /*
@@ -14874,7 +14878,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: B51885B24C31E4B03E9CE0A279FE0BBB
+// __TYPE_DECL_START: C11667FB415DB0DF984D3594567A05F5
     namespace Game.Blueprint.GE.BPGE_AttackHit {
         class BPGE_AttackHit_C extends UE.GameplayEffect {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14936,6 +14940,53 @@ declare module "ue" {
             static Load(InName: string): BPGA_Death_C;
         
             __tid_BPGA_Death_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 943537C740292E32B0AE509D4CFA4EEB
+    namespace Game.Blueprint.GA.BPGA_HitCheckMonster {
+        class BPGA_HitCheckMonster_C extends UE.GameplayAbility {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            UberGraphFrame: UE.PointerToUberGraphFrame;
+            Cancelled_9A16A5C04C360C566D70AC951E252B4D(Data: UE.GameplayAbilityTargetDataHandle) : void;
+            ExecuteUbergraph_BPGA_HitCheckMonster(EntryPoint: number) : void;
+            /*
+             *The main function that defines what an ability does.
+             * -Child classes will want to override this
+             * -This function graph should call CommitAbility
+             * -This function graph should call EndAbility
+             *
+             * Latent_async actions are ok in this graph. Note that Commit and EndAbility calling requirements speak to the K2_ActivateAbility graph.
+             * In C++, the call to K2_ActivateAbility() may return without CommitAbility or EndAbility having been called. But it is expected that this
+             * will only occur when latent_async actions are pending. When K2_ActivateAbility logically finishes, then we will expect Commit_End to have been called.
+             */
+            K2_ActivateAbility() : void;
+            ValidData_9A16A5C04C360C566D70AC951E252B4D(Data: UE.GameplayAbilityTargetDataHandle) : void;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): BPGA_HitCheckMonster_C;
+            static Load(InName: string): BPGA_HitCheckMonster_C;
+        
+            __tid_BPGA_HitCheckMonster_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 7A0E423A4B407FC8C270D7A778EEB684
+    namespace Game.Blueprint.GC.Static.GCN_DamageBlink {
+        class GCN_DamageBlink_C extends UE.GameplayCueNotify_Static {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            /*
+             *Called when a GameplayCue is executed, this is used for instant effects or periodic ticks
+             */
+            OnExecute(MyTarget: $Nullable<UE.Actor>, Parameters: UE.GameplayCueParameters) : boolean;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): GCN_DamageBlink_C;
+            static Load(InName: string): GCN_DamageBlink_C;
+        
+            __tid_GCN_DamageBlink_C_0__: boolean;
         }
         
     }
