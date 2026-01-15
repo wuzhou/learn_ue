@@ -14621,7 +14621,7 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: 392DD4D94C2070DBA1CE119244CAAF0D
+// __TYPE_DECL_START: AC249A05424775DAC3D7008B84AEB0EB
     namespace Game.Blueprint.Characters.Hero.BPC_PlayerHero {
         class BPC_PlayerHero_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
@@ -14718,14 +14718,20 @@ declare module "ue" {
     }
 
 // __TYPE_DECL_END
-// __TYPE_DECL_START: E3A39FE0432C8F0EF401208A9777B06B
+// __TYPE_DECL_START: E0ABA6AB463C1EEA45BE5EBEEE8E8ED7
     namespace Game.Blueprint.Characters.BPC_MasterMonster {
         class BPC_MasterMonster_C extends UE.Game.Blueprint.Characters.BP_MasterZD.BP_MasterZD_C {
             constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
             UberGraphFrame: UE.PointerToUberGraphFrame;
+            HpBarWidgetComp: UE.WidgetComponent;
+            HpBar: UE.Game.Blueprint.UI.WBP_HealthBar.WBP_HealthBar_C;
             BndEvt__BPC_MasterMonster_HitBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent: $Nullable<UE.PrimitiveComponent>, OtherActor: $Nullable<UE.Actor>, OtherComp: $Nullable<UE.PrimitiveComponent>, OtherBodyIndex: number, bFromSweep: boolean, SweepResult: UE.HitResult) : void;
             ExecuteUbergraph_BPC_MasterMonster(EntryPoint: number) : void;
             FollowPlayer(WorldDirection: UE.Vector) : void;
+            /*
+             *Event when play begins for this actor.
+             */
+            ReceiveBeginPlay() : void;
             /*
              *Event called when the Pawn is possessed by a Controller. Only called on the server (or in standalone)
              */
@@ -14987,6 +14993,31 @@ declare module "ue" {
             static Load(InName: string): GCN_DamageBlink_C;
         
             __tid_GCN_DamageBlink_C_0__: boolean;
+        }
+        
+    }
+
+// __TYPE_DECL_END
+// __TYPE_DECL_START: 3BC4EB5A4DEA3E6ED2E0E686607501D6
+    namespace Game.Blueprint.UI.WBP_HealthBar {
+        class WBP_HealthBar_C extends UE.UserWidget {
+            constructor(Outer?: Object, Name?: string, ObjectFlags?: number);
+            UberGraphFrame: UE.PointerToUberGraphFrame;
+            FrontProgressBar: UE.ProgressBar;
+            SizeBox_Root: UE.SizeBox;
+            MaxHealth: number;
+            CurHealth: number;
+            BindCharacterAttributes(CharacterAttributeSet: $Nullable<UE.ABCharacterAttributeSet>) : void;
+            ExecuteUbergraph_WBP_HealthBar(EntryPoint: number) : void;
+            InitProgress(AttributeSet: $Nullable<UE.ABCharacterAttributeSet>) : void;
+            OnHealthChanged(oldValue: number, newValue: number) : void;
+            OnMaxHealthChanged(oldValue: number, newValue: number) : void;
+            Refresh() : void;
+            static StaticClass(): Class;
+            static Find(OrigInName: string, Outer?: Object): WBP_HealthBar_C;
+            static Load(InName: string): WBP_HealthBar_C;
+        
+            __tid_WBP_HealthBar_C_0__: boolean;
         }
         
     }
